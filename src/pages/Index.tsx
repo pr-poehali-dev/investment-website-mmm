@@ -46,10 +46,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { value: '2.5 млрд ₽', label: 'Капитализация', icon: 'TrendingUp' },
-    { value: '15 000+', label: 'Инвесторов', icon: 'Users' },
+    { value: '500 млн ₽', label: 'Капитализация', icon: 'TrendingUp' },
+    { value: '1 000+', label: 'Инвесторов', icon: 'Users' },
     { value: '120+', label: 'Проектов', icon: 'Briefcase' },
-    { value: '99.2%', label: 'Возврат средств', icon: 'Shield' }
+    { value: '99.5%', label: 'Возврат средств', icon: 'Shield' }
   ];
 
   const scrollToSection = (sectionId: string) => {
