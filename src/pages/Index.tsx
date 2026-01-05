@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('home');
   const [investment, setInvestment] = useState([100000]);
   const [months, setMonths] = useState([12]);
@@ -182,7 +184,10 @@ const Index = () => {
                       <span className="font-semibold">{project.term}</span>
                     </div>
                   </div>
-                  <Button className="w-full bg-gold hover:bg-gold-dark text-background">
+                  <Button 
+                    className="w-full bg-gold hover:bg-gold-dark text-background"
+                    onClick={() => navigate(`/application?project=${encodeURIComponent(project.title)}`)}
+                  >
                     Инвестировать
                   </Button>
                 </CardContent>
